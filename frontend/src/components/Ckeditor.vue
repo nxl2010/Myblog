@@ -1,22 +1,31 @@
+<script setup>
+import Editor from '@tinymce/tinymce-vue'
+</script>
+
 <template>
-  <div id="app">
-      <ckeditor :editor="editor" v-model="editorData" :config="editorConfig"></ckeditor>
-  </div>
+  <main id="sample">
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <Editor
+      api-key="fx6eje7n5iktth72nd9cinlo9fwm6v8umv88lvpm7l89jyv0"
+      :init="{
+        plugins: 'lists link image table code help wordcount'
+      }"
+    />
+  </main>
 </template>
 
-<script>
-  import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+<style scoped>
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
 
-  export default {
-      name: 'app',
-      data() {
-          return {
-              editor: ClassicEditor,
-              editorData: '<p>Content of the editor.</p>',
-              editorConfig: {
-                  // The configuration of the editor.
-              }
-          };
-      }
+@media (min-width: 1024px) {
+  #sample {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 1000px;
   }
-</script>
+}
+</style>
