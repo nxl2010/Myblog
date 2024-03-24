@@ -1,5 +1,4 @@
 <template>
-  <Ckeditor></Ckeditor>
   <div class="container mx-auto p-4">
     <h1 class="text-2xl font-bold mb-4">CRUD Example</h1>
     <button @click="toggleCreateForm" class="mb-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg">

@@ -165,10 +165,8 @@
       <Slidebar></Slidebar>
     </div>
   </div>
-  <Ckeditor></Ckeditor>
 </template>
 <script setup>
-import Ckeditor from '../components/Ckeditor.vue';
 import Slidebar from '../components/Slidebar.vue';
 import { useRoute } from 'vue-router';
 

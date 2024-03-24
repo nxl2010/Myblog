@@ -8,6 +8,7 @@ import Logout from '../views/Logout.vue'
 import AdminLayout from '../layout/AdminLayout.vue'
 import Dashboard from '../views/admin/Dashboard.vue'
 import Search from '../views/Search.vue'
+import PostCRUD from '../views/admin/PostCRUD.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -72,8 +73,16 @@ const router = createRouter({
       component: ()=> import('../views/PostView.vue')
     },
     {
-      path: '/admin',
+      path: '/admin/dashboard',
       name: 'dashboard',
+      meta:{
+        layout: AdminLayout
+      },
+      component: PostCRUD
+    },
+    {
+      path: '/admin/post',
+      name: 'post',
       meta:{
         layout: AdminLayout
       },

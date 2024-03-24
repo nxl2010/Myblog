@@ -2,7 +2,6 @@
     <header class=" sticky top-0 left-0 bg-white">
         <Header></Header>
         <NavLink></NavLink>
-
     </header>
     <SideBar></SideBar>
     <div class="ml-16">
